@@ -166,7 +166,6 @@ int main() {
     display_info(filename);
     display_rows(filename, MAX_LINES);
     check_missing_values(filename);
-
     calculate_statistics(filename);
     return 0;
 }
