@@ -164,7 +164,6 @@ void display_rows(const char *filename, int max_lines) {
 int main() {
     const char *filename = "C:/Users/Dell/Desktop/Game/survey_lung_cancer (4).csv";
     display_info(filename);
-    // load_data.head()
     display_rows(filename, MAX_LINES);
     //load_data.isnull().sum()
     check_missing_values(filename);
