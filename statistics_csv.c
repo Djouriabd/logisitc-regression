@@ -163,7 +163,6 @@ void display_rows(const char *filename, int max_lines) {
 
 int main() {
     const char *filename = "C:/Users/Dell/Desktop/Game/survey_lung_cancer (4).csv";
-    //load_data.info()
     display_info(filename);
     // load_data.head()
     display_rows(filename, MAX_LINES);
