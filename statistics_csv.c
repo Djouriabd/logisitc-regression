@@ -165,7 +165,6 @@ int main() {
     const char *filename = "C:/Users/Dell/Desktop/Game/survey_lung_cancer (4).csv";
     display_info(filename);
     display_rows(filename, MAX_LINES);
-    //load_data.isnull().sum()
     check_missing_values(filename);
     //process_data.describe()
     calculate_statistics(filename);
