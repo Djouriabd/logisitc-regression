@@ -9,24 +9,39 @@ float logistic(float x) {
     return 1 / (1 + exp(-x));
 }
 
+float odd(float y){
+    if (y==1||y==0) {return -1;}
+    else{
+        return y/(1-y);
+    }
+}
+
+float log_odd(float z){
+    return log(z);
+}
+
 int main(){
-    float t1[5],t2[5],fx,z;
-    int y;
-    for (int i=0;i<5;i++){
+    float t1[20],t2[20],y;
+    for (int i=0;i<10;i++){
         printf("give me the values of the first table:");
         scanf("%f",&t1[i]);
     }
-    for (int i=0;i<5;i++){
+    for (int i=0;i<10;i++){
         printf("give me the values of the second table:");
         scanf("%f",&t2[i]);
     }
     printf("give me the prediction number u want:");
     scanf("%d",&y);
-    for (int i=0;i<5;i++){
-    fx=linear_regression(t1[i],t2[i],y);
-    printf("prediction:  \n%.2f  ",fx);
-    z=logistic(fx);
-    printf("logistic:  \n%.2f  ",z);
+    for (int i=0;i<10;i++){
+        float fx=linear_regression(t1[i],t2[i],y);
+        printf("\nthe prediction for the value:%f",fx);
+        float z=logistic(fx);
+        printf("\nthe logistic for the value:%f",z);
+        float k=odd(z);
+        printf("\nthe odd value:%f",k);
+        float j=log_odd(k);
+        printf("\nthe log odd value:%f",j);
+        printf("\n+--------------------------------+");
     }
     return 0;
 }
