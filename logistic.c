@@ -3,7 +3,7 @@
 #include<math.h>
 
 //float linear_regression(float w,float b,int x){
-int linear_regression(float w,float b,int x){
+int linear_regression(int w,int b,int x){
 return (w*x)+b;}
 
 float logistic(int x) {
@@ -28,13 +28,13 @@ int main(){
         printf("give me the values of the first table:");
         scanf("%d",&t1[i]);
     }
-    for (int i=0;i<10;i++){
+    for ( i=0;i<10;i++){
         printf("give me the values of the second table:");
         scanf("%d",&t2[i]);
     }
     printf("give me the prediction number u want:");
     scanf("%d",&y);
-    for (int i=0;i<10;i++){
+    for ( i=0;i<10;i++){
         //float fx=linear_regression(t1[i],t2[i],y);
         int fx=linear_regression(t1[i],t2[i],y);
         printf("\nthe prediction for the value:%d",fx);
