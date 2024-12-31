@@ -2,10 +2,11 @@
 #include<cmath>
 using namespace std;
 
-float linear_regression(float w,float b,int x){
+//float linear_regression(float w,float b,int x){
+int linear_regression(int w,int b,int x){
 return (w*x)+b;}
 
-float logistic(float x) {
+float logistic(int x) {
     return 1 / (1 + exp(-x));
 }
 
@@ -20,20 +21,20 @@ float log_odd(float z){
 }
 
 int main(){
-    float t1[20],t2[20],y;
+    int t1[20],t2[20],y;
 
     for (int i=0;i<10;i++){
         cout <<"give me the values of the first table:";
         cin >> t1[i];
     }
-    for (int i=0;i<10;i++){
+    for ( i=0;i<10;i++){
         cout <<"give me the values of the second table:";
         cin >> t2[i];
     }
     cout <<"give me the prediction number u want:";
     cin >> y;
-    for (int i=0;i<10;i++){
-        float fx=linear_regression(t1[i],t2[i],y);
+    for ( i=0;i<10;i++){
+        int fx=linear_regression(t1[i],t2[i],y);
         cout << "the prediction for the value:  " << fx << endl;
         float z=logistic(fx);
         cout << "the logistic for the value:  " << z << endl;
