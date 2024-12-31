@@ -2,10 +2,11 @@
 #include<stdlib.h>
 #include<math.h>
 
-float linear_regression(float w,float b,int x){
+//float linear_regression(float w,float b,int x){
+int linear_regression(float w,float b,int x){
 return (w*x)+b;}
 
-float logistic(float x) {
+float logistic(int x) {
     return 1 / (1 + exp(-x));
 }
 
@@ -21,20 +22,22 @@ float log_odd(float z){
 }
 
 int main(){
-    float t1[20],t2[20],y;
+    //float t1[20],t2[20],y;
+    int t1[20],t2[20],y;
     for (int i=0;i<10;i++){
         printf("give me the values of the first table:");
-        scanf("%f",&t1[i]);
+        scanf("%d",&t1[i]);
     }
     for (int i=0;i<10;i++){
         printf("give me the values of the second table:");
-        scanf("%f",&t2[i]);
+        scanf("%d",&t2[i]);
     }
     printf("give me the prediction number u want:");
     scanf("%d",&y);
     for (int i=0;i<10;i++){
-        float fx=linear_regression(t1[i],t2[i],y);
-        printf("\nthe prediction for the value:%f",fx);
+        //float fx=linear_regression(t1[i],t2[i],y);
+        int fx=linear_regression(t1[i],t2[i],y);
+        printf("\nthe prediction for the value:%d",fx);
         float z=logistic(fx);
         printf("\nthe logistic for the value:%f",z);
         float k=odd(z);
