@@ -23,25 +23,26 @@ float log_odd(float z){
 int main(){
 
     float t1[20],t2[20],y;
+    int i;
     //int t1[20],t2[20],y;
-    for (int i=0;i<20;i++){
+    for (i=0;i<20;i++){
         cout <<"give me the values of the first table:";
         cin >> t1[i];
     }
-    for ( i=0;i<20;i++){
+    for (i=0;i<20;i++){
         cout <<"give me the values of the second table:";
         cin >> t2[i];
     }
     cout <<"give me the prediction number u want:";
     cin >> y;
-    for ( i=0;i<20;i++){
+    for (i=0;i<20;i++){
         float fx=linear_regression(t1[i],t2[i],y);
         cout << "the prediction for the value:  " << fx << endl;
         float z=logistic(fx);
         cout << "the logistic for the value:  " << z << endl;
         float k=odd(z);
         if (k ==-1){
-            cout << "can't calculate the odd it took -infinity value"<<endl;
+            cout << "  can't calculate the odd it took -infinity value"<<endl;
         }
         else{
             cout << "the odd value:   "<< k << endl;
