@@ -21,8 +21,9 @@ float log_odd(float z){
 int main(){
     //i took n=20 for the both table to use a sample of 20 lines with 2 columns (the one of csv of salaries)
     float t1[20],t2[20],y;
+    int i;
     //int t1[20],t2[20],y;
-    for (int i=0;i<20;i++){
+    for (i=0;i<20;i++){
         printf("give me the values of the first table:");
         scanf("%f",&t1[i]);
     }
@@ -40,7 +41,7 @@ int main(){
         printf("\nthe logistic for the value:%f",z);
         float k=odd(z);
         if (k ==-1){
-            printf("can't calculate the odd it took -infinity value");}
+            printf("\ncan't calculate the odd it took -infinity value");}
         else{
             printf("\nthe odd value:%f",k);
             float j=log_odd(k);
