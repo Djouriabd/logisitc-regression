@@ -6,7 +6,7 @@ float linear_regression(float w,float b,float x){
 //int linear_regression(int w,int b,int x){
 return (w*x)+b;}
 
-float logistic(int x) {
+float logistic(float x) {
     return 1.0/(1.0 + exp(-x));
 }
 
